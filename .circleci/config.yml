@@ -4,7 +4,7 @@ orbs:
 
 jobs:
   build:
-    executor: win/vs2019
+    executor: win/default
     steps:
       - nuget restore
       - msbuild Project1.sln /p:Configuration=Debug
