@@ -6,5 +6,4 @@ jobs:
   build:
     executor: machine
     steps:
-      - nuget restore
       - msbuild Project1.sln /p:Configuration=Debug
