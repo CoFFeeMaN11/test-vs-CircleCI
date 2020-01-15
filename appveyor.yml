@@ -2,5 +2,5 @@ image: Visual Studio 2017
 os: Previous Visual Studio 2017
 build_script:
   - call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars32.bat"
-  - nuget restore
+  - dotnet restore
   - msbuild Project1.sln /p:Configuration=Debug
