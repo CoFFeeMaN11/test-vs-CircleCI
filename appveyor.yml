@@ -1,5 +1,5 @@
 image: Visual Studio 2017
 os: Previous Visual Studio 2017
 build:
-	- call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars32.bat"
-	- msbuild Project1.sln /p:Configuration=Debug
+  - call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars32.bat"
+  - msbuild Project1.sln /p:Configuration=Debug
