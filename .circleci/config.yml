@@ -1,4 +1,4 @@
-version: 2.1
+version: 2
 orbs:
   windows: circleci/windows@2.3.0
 
@@ -6,5 +6,5 @@ jobs:
   build:
     executor: win/vs2019
     steps:
-      - dotnet restore
+      - nuget restore
       - msbuild Project1.sln /p:Configuration=Debug
