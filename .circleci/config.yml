@@ -1,9 +1,0 @@
-version: 2
-orbs:
-  windows: circleci/windows@2.3.0
-
-jobs:
-  build:
-    executor: machine
-    steps:
-      - msbuild Project1.sln /p:Configuration=Debug
