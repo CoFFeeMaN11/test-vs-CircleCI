@@ -15,13 +15,11 @@ steps:
     command: 'restore'
     restoreSolution: '**/*.sln'
     feedsToUse: 'select'
-
 - task: MSBuild@1
   inputs:
     solution: '**/*.sln'
     platform: 'x86'
     configuration: 'Debug'
-  
 - task: VSTest@2
   inputs:
     testSelector: 'testAssemblies'
