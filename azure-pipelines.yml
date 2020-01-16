@@ -29,4 +29,4 @@ steps:
       !**\*TestAdapter.dll
       !**\obj\**
     searchFolder: '$(System.DefaultWorkingDirectory)'
-    pathtoCustomTestAdapters: '$(System.DefaultWorkingDirectory)\packages\GoogleTestAdapter.0.17.1\build\_common'
+    pathtoCustomTestAdapters: 'packages\GoogleTestAdapter.0.17.1\build\_common'
