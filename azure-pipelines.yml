@@ -9,6 +9,7 @@ trigger:
 pool:
   vmImage: "vs2017-win2016"
 
+steps: 
 - task: NuGetCommand@2
   inputs:
     command: 'restore'
