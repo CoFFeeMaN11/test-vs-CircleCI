@@ -9,24 +9,24 @@ trigger:
 pool:
   vmImage: "vs2017-win2016"
 
-steps: 
-- task: NuGetCommand@2
-  inputs:
-    command: 'restore'
-    restoreSolution: '**/*.sln'
-    feedsToUse: 'select'
-- task: MSBuild@1
-  inputs:
-    solution: '**/*.sln'
-    platform: 'x86'
-    configuration: 'Debug'
-- task: VSTest@2
-  inputs:
-    testSelector: 'testAssemblies'
-    testAssemblyVer2: |
-      **\*test*.dll
-      **\*Tests.exe
-      !**\*TestAdapter.dll
-      !**\obj\**
-    searchFolder: '$(System.DefaultWorkingDirectory)'
-    pathtoCustomTestAdapters: 'packages\GoogleTestAdapter.0.17.1\build\_common'
+steps:
+  - task: NuGetCommand@2
+    inputs:
+      command: "restore"
+      restoreSolution: "**/*.sln"
+      feedsToUse: "select"
+  - task: MSBuild@1
+    inputs:
+      solution: "**/*.sln"
+      platform: "x86"
+      configuration: "Debug"
+  - task: VSTest@2
+    inputs:
+      testSelector: "testAssemblies"
+      testAssemblyVer2: |
+        **\*test*.dll
+        **\*Tests.exe
+        !**\*TestAdapter.dll
+        !**\obj\**
+      searchFolder: "$(System.DefaultWorkingDirectory)"
+      pathtoCustomTestAdapters: '$(System.DefaultWorkingDirectory)\packages\GoogleTestAdapter.0.17.1\build\_common'
