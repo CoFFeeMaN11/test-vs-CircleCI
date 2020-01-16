@@ -17,3 +17,9 @@ steps:
       platform: "x86"
       configuration: "Debug"
       restoreNugetPackages: true
+  - task: VSTest@2
+    inputs:
+      testSelector: 'testRun'
+      searchFolder: '$(System.DefaultWorkingDirectory)'
+      vsTestVersion: '15.0'
+      pathtoCustomTestAdapters: '$(System.DefaultWorkingDirectory)\Debug'
