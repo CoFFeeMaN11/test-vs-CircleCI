@@ -30,3 +30,4 @@ steps:
         !**\obj\**
       searchFolder: "$(System.DefaultWorkingDirectory)"
       pathtoCustomTestAdapters: '$(System.DefaultWorkingDirectory)\packages\GoogleTestAdapter.0.17.1\build\_common'
+      codeCoverageEnabled: true
