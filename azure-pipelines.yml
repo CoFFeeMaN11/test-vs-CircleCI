@@ -22,4 +22,3 @@ steps:
       testSelector: 'testRun'
       searchFolder: '$(System.DefaultWorkingDirectory)'
       vsTestVersion: '15.0'
-      pathtoCustomTestAdapters: '$(System.DefaultWorkingDirectory)\Debug'
